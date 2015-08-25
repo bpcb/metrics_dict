@@ -12,7 +12,7 @@ class Definition(models.Model):
 	metric = models.ForeignKey(Metric)
 	sql = models.TextField(max_length = 1000)
 	start_date = models.DateField('Definition start date', default = datetime.now().date())
-	end_date = models.DateField('Definition end date', default = None, null =True)
+	end_date = models.DateField('Definition end date', default = None, blank = True, null =True)
 	is_active = models.BooleanField(default = True)
 
 	EXPERIENCE_CHOICES = (
