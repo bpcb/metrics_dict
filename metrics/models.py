@@ -3,6 +3,7 @@ from django.db import models
 class Metric(models.Model):
 	metric_name = models.CharField(max_length = 50)
 	metric_text = models.TextField(max_length = 500)
+	metric_description = models.TextField(max_length = 1000)
 	update_date = models.DateTimeField('date updated')
 
 	EXPERIENCE_CHOICES = (
